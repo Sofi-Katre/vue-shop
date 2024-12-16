@@ -7,7 +7,7 @@
       <div class="loop-action">
         <a href="" class="add-to-cart">To bookmarks</a>
         <a href="" class="loop-add-to-cart">To bascet</a>
-        <h3 class="ratesytle">The rate an item: {{ infoitem.rating.rate }}</h3>
+        <h3 class="rate">The rate an item: {{ infoitem.rating.rate }}</h3>
         <h6 class="ratesytle">{{ infoitem.description }}</h6>
       </div>
       <div class="product-info">
@@ -30,10 +30,28 @@ export default {
 * {
   box-sizing: border-box;
 }
+img {
+  width: 10vh;
+  height: 40vh;
+  object-fit: contain;
+  object-position: center;
+}
+.rate {
+  color: #f1e7e8;
+  font-size: 0.7rem;
+  padding-top: 1vh;
+}
 .ratesytle {
   color: #f1e7e8;
   font-size: 0.7rem;
   padding-top: 1vh;
+  height: 10vh;
+  overflow-y: scroll;
+  scrollbar-color: rgb(212, 205, 191) rgb(44, 44, 44);
+  scrollbar-width: thin;
+}
+.ratesytle::-webkit-scrollbar-track {
+  border-radius: 5px;
 }
 .border {
   width: 300px;

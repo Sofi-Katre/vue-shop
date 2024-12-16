@@ -26,7 +26,7 @@ export default {
         :key="key"
       />
     </div>
-    <div class="page grid grid-cols-2 gap-3 w-1/2">
+    <div class="page grid grid-cols-2 gap-3 w-60">
       <button
         class="btnstyle"
         @click="
@@ -60,6 +60,7 @@ export default {
 }
 .page {
   margin: 0 auto;
+  padding-top: 4vh;
 }
 .btnstyle {
   width: 10vh;
