@@ -1,28 +1,43 @@
-<script setup></script>
 <template>
   <div class="border">
     <div class="wrap">
       <div class="product-wrap">
-        <a href=""><img src="https://html5book.ru/wp-content/uploads/2015/10/black-dress.jpg" /></a>
+        <img :src="infoitem.image" alt="Photo" />
       </div>
       <div class="loop-action">
-        <a href="" class="add-to-cart">Отложить</a>
-        <a href="" class="loop-add-to-cart">В корзину</a>
+        <a href="" class="add-to-cart">To bookmarks</a>
+        <a href="" class="loop-add-to-cart">To bascet</a>
+        <h3 class="ratesytle">The rate an item: {{ infoitem.rating.rate }}</h3>
+        <h6 class="ratesytle">{{ infoitem.description }}</h6>
       </div>
       <div class="product-info">
-        <h3 class="product-title">Маленькое черное платье</h3>
-        <div class="price">&#8381; 1999</div>
+        <h3 class="product-title">{{ infoitem.title }}</h3>
+        <div class="price">$ {{ infoitem.price }}</div>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    infoitem: Object,
+  },
+}
+</script>
+
 <style scoped>
 * {
   box-sizing: border-box;
 }
+.ratesytle {
+  color: #f1e7e8;
+  font-size: 0.7rem;
+  padding-top: 1vh;
+}
 .border {
   width: 300px;
+  height: fit-content;
   margin: 0 auto;
   background: white;
   padding: 20px;
